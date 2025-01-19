@@ -1,0 +1,92 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* Add a subtle gradient background */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+    background: none !important; /* Light blue to white gradient */
+}
+.container {
+    margin-top: 30px;
+}
+.carousel img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.product-details h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.product-details ul {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.additional-resources {
+    margin-top: 30px;
+}
+.qr-code img {
+    max-width: 150px;
+}
+/* Customizing Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+}
+.carousel-indicators [data-bs-target]{
+    background-color: black;
+}
+.additional-resources {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.qr-code img {
+    cursor: pointer;
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.additional-resources h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.additional-resources .btn-primary {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+}
+
+/* PDF Preview Image */
+#pdf-preview {
+    max-width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* Optional: Add styling for the PDF thumbnail */
+.pdf-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*star css*/
+.stars {
+    list-style-type: "★";
+}
+.stars li{
+    padding-left: 10px;
+}

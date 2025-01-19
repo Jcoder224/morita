@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../../categorystyles.css">
+    <link rel="stylesheet" href="../../vendor/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* Reset anchor tag default styles */
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+</style>
+<body>
+
+<div class="container">
+    <div class="row animated-cards py-5">
+        <!-- Product 1 -->
+        <div class="col-md-4 col-12 mb-4">
+            <a href="./tcs-tsii/index.html">
+                <div class="card shadow-sm h-100">
+                    <img src="../categoryImages/suctionsystems.png" class="card-img-top" alt="Product 6">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">TCS-TSII Suction Unit</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <button class="back-button" onclick="goBack()"><span><img src="../../angles-left-solid.svg" alt="back-button-img"></span></button>
+    <button class="home-button" onclick="goHome()"><span><img src="../../house-solid.svg" alt="back-button-img"></span></button>
+</div>
+
+
+
+<script src="../../vendor/js/bootstrap.bundle.min.js"></script>
+<script src="../../script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cardsContainer = document.querySelector(".animated-cards");
+        cardsContainer.classList.add("loaded");
+    });
+</script>
+</body>
+</html>

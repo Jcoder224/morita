@@ -1,0 +1,128 @@
+/* Body and container setup */
+body, html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+#homepage {
+    text-align: center;
+    color: white;
+}
+
+/* Video container setup */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Video styling */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Button styling */
+button {
+    position: absolute;
+    z-index: 10;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* "Click to Start" button */
+#MainLogo{
+    height: 550px;
+}
+#start-button {
+    top:70%;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(14, 14, 26);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+}
+
+/* "Click to Enter" Button Styling */
+
+#enter-button {
+    bottom: 2%;
+    right: 2%;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(255 255 255);
+    color: rgb(0 0 0);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #a7a7a7;
+    /*-webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));*/
+}
+
+#enter-button:active {
+    scale: 0.92;
+}
+
+#enter-button:hover {
+    /*background: rgb(2,29,78);*/
+    /*background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);*/
+    /*color: rgb(4, 4, 38);*/
+}
+
+
+
+
+
+/* Full-screen video */
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Hide videos when not active */
+#video1, #video2 {
+    display: none;
+}
+
+#video1.active, #video2.active {
+    display: block;
+}

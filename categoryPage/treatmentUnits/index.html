@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../../categorystyles.css">
+    <link rel="stylesheet" href="../../vendor/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <div class="row animated-cards">
+        <!-- Product 1 -->
+        <div class="col-md-4 offset-md-2 col-6 mb-4">
+            <a href="signoT500/index.html">
+                <div class="card shadow-sm h-100">
+                    <img src="./image/signoT500.png" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Signo T500</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4 mb-4">
+            <a href="signoT100/index.html">
+                <div class="card shadow-sm h-100">
+                    <img src="./image/signoT100.png" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Signo T100</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4 offset-md-2 mb-4">
+            <a href="signoZ300/index.html">
+                <div class="card shadow-sm h-100">
+                    <img src="./image/signoZ300.png" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Signo Z300</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Product 4 -->
+        <div class="col-md-4 col-6 mb-4">
+            <a href="sX4000II/index.html">
+                <div class="card shadow-sm h-100">
+                    <img src="./image/sX4000II.png" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">SX4000II</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <button class="back-button" onclick="goBack()"><span><img src="../../angles-left-solid.svg" alt="back-button-img"></span></button>
+    <button class="home-button" onclick="goHome()"><span><img src="../../house-solid.svg" alt="back-button-img"></span></button>
+</div>
+
+
+<script src="../../vendor/js/bootstrap.bundle.min.js"></script>
+<script src="../../script.js"></script>
+<script>
+    const homePageDirectory = "file:///home/pramod/Desktop/darshan/index.html";
+    document.addEventListener('DOMContentLoaded', () => {
+        const cardsContainer = document.querySelector(".animated-cards");
+        cardsContainer.classList.add("loaded");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - Dentaport ZX </title>
+    <link rel="stylesheet" href="../../../categorystyles.css">
+    <link rel="stylesheet" href="../../../vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../productPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .carousel img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .product-details h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .product-details ul {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        .back-button {
+            margin-top: 20px;
+        }
+        .additional-resources {
+            margin-top: 30px;
+        }
+        .qr-code img {
+            max-width: 150px;
+        }
+        /* Customizing Carousel Controls */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black;
+        }
+        .carousel-indicators [data-bs-target]{
+            background-color: black;
+        }
+        .additional-resources {
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .qr-code img {
+            max-width: 150px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .qr-code img:hover {
+            transform: scale(1.1);
+        }
+
+        .additional-resources h4 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .additional-resources .btn-primary {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 25px;
+        }
+
+        /* PDF Preview Image */
+        #pdf-preview {
+            max-width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            display: block;
+            cursor: pointer;
+        }
+
+        /* Optional: Add styling for the PDF thumbnail */
+        .pdf-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <!-- Left Side: Carousel -->
+        <div class="col-md-12">
+            <h1 class="text-center">Root ZX3</h1>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video controls class="d-block w-100">
+                            <source src="./rootZX3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="back-button" onclick="goBack()"><span><img src="../../../angles-left-solid.svg" alt="back-button-img"></span></button>
+    <button class="home-button" onclick="goHome()"><span><img src="../../../house-solid.svg" alt="back-button-img"></span></button>
+</div>
+
+<script src="../../../vendor/js/bootstrap.bundle.min.js"></script>
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+<script src="../../../script.js"></script>
+
+<script>
+    function openBrochure() {
+        const brochureModal = new bootstrap.Modal(document.getElementById('brochureModal'));
+        brochureModal.show();
+    }
+
+    const carouselElement = document.getElementById('carouselExampleIndicators');
+
+    carouselElement.addEventListener('slid.bs.carousel', function () {
+        // Find the active slide
+        const activeSlide = carouselElement.querySelector('.carousel-item.active');
+
+        // Find all videos in the carousel
+        const videos = carouselElement.querySelectorAll('video');
+
+        // Pause all videos except the one in the active slide
+        videos.forEach(video => {
+            if (!activeSlide.contains(video)) {
+                video.pause();
+            }else{
+                video.play();
+            }
+        });
+    });
+</script>
+</body>
+</html>

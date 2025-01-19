@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - Signo T500</title>
+    <link rel="stylesheet" href="../../../categorystyles.css">
+    <link rel="stylesheet" href="../../../vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../productPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container  animated-cards">
+    <div class="row">
+        <!-- Left Side: Carousel -->
+        <div class="col-md-6">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="vitapex.jpg" class="d-block w-100" alt="Product Image 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Product Details -->
+        <div class="col-md-6 product-details">
+            <h1>Vitapex</h1>
+            <p>
+                Iodoform based calcium hydroxide, can be used as a temporary or permanent root canal filling material after a pulpectomy or root canal treatment.
+            </p>
+            <p>
+                It can also be used for apexification, hard tissue formation, apexogenesis, and treating root resorption
+            </p>
+            <!-- Improved Additional Resources Section -->
+            <div class="row additional-resources">
+                <!-- QR Code Section -->
+                <div class="col-md-6 text-center qr-code">
+                    <h4 class="mb-3">Scan QR Code</h4>
+                    <p class="small mb-3">
+                        Explore more about the Vitapex using the QR code below.
+                    </p>
+                    <img src="vitapex-qr.png" alt="QR Code for Signo T500" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Brochure Section -->
+                <div class="col-md-6 text-center">
+                    <h4 class="mb-3">Product Brochure</h4>
+                    <p class="small mb-3">
+                        Get a glimpse of the Vitapex features by viewing the brochure.
+                    </p>
+                    <!-- Replace the button with the PDF image thumbnail -->
+                    <span id="pdf-preview" onclick="openBrochure()">
+                        <img src="pdf-thumbnail.png" alt="PDF Thumbnail" class="pdf-thumbnail rounded shadow" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="back-button" onclick="goBack()"><span><img src="../../../angles-left-solid.svg" alt="back-button-img"></span></button>
+    <button class="home-button" onclick="goHome()"><span><img src="../../../house-solid.svg" alt="back-button-img"></span></button>
+</div>
+<!-- Modal for Fullscreen Brochure View -->
+<div id="brochureModal" class="modal fade" tabindex="-1" aria-labelledby="brochureModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="brochureModalLabel">Product Brochure - First Page</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe src="vitapex-brochure.pdf" width="100%" height="100%" style="border: none;"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../../vendor/js/bootstrap.bundle.min.js"></script>
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+<script src="../../../script.js"></script>
+
+<script>
+    function openBrochure() {
+        const brochureModal = new bootstrap.Modal(document.getElementById('brochureModal'));
+        brochureModal.show();
+    }
+
+    const carouselElement = document.getElementById('carouselExampleIndicators');
+
+    carouselElement.addEventListener('slid.bs.carousel', function () {
+        // Find the active slide
+        const activeSlide = carouselElement.querySelector('.carousel-item.active');
+
+        // Find all videos in the carousel
+        const videos = carouselElement.querySelectorAll('video');
+
+        // Pause all videos except the one in the active slide
+        videos.forEach(video => {
+            if (!activeSlide.contains(video)) {
+                video.pause();
+            }else{
+                video.play();
+            }
+        });
+    });
+</script>
+</body>
+</html>
