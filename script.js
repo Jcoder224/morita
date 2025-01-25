@@ -62,5 +62,5 @@ function goBack() {
 }
 
 function goHome() {
-    window.location.href = homePageDirectory;
+    window.location.href = ./index.html;
 }
